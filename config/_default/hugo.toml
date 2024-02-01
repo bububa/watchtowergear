@@ -1,0 +1,7 @@
+baseURL = 'https://watchtowergear.netlify.app'
+languageCode = 'en-us'
+title = 'Watch Tower Gear'
+theme = 'netlify-basic'
+
+assetDir = "static"
+

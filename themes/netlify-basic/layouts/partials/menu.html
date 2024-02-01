@@ -1,0 +1,18 @@
+{{- $currentPage := . }}
+{{- $textTransform := "capitalize" }}
+<div
+  class="{{- if .IsHome }} fixed {{- else }} sticky {{- end }} left-0 right-0 top-0 py-8 flex justify-center flex-row flex-shrink mx-auto">
+  <nav class="w-auto text-sm font-medium backdrop-blur-lg bg-white/30 text-gray-400 font-light">
+    {{- range site.Menus.main }}
+    {{- if eq .Identifier "home" }}
+    {{- $textTransform = "uppercase" }}
+    {{- else }}
+    {{- $textTransform = "capitalize" }}
+    {{- end }}
+    <a href="{{ .URL }}"
+      class="p-4 inline-block pointer-events-auto {{ $textTransform }} {{- if $currentPage.IsMenuCurrent .Menu . }} bg-black text-white {{- else }} hover:transition-color hover:text-black {{- end }}">
+      {{.Name }}
+    </a>
+    {{- end}}
+  </nav>
+</div>

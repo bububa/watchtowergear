@@ -1,0 +1,43 @@
+[[main]]
+    identifier = 'home'
+    name = 'home 首页'
+    url = '/'
+    pageRef = '/'
+    weight = 1
+[[main]]
+    identifier = 'about-us'
+    name = 'about us 简介'
+    url = '/about-us'
+    pageRef = '/about-us'
+    weight = 2
+[[main]]
+    identifier = 'brand'
+    name = 'brand 品牌'
+    url = '/brand'
+    pageRef = '/brand'
+    weight = 3
+[[main]]
+    identifier = 'dealer'
+    name = 'dealer 经销商'
+    url = '/dealer'
+    pageRef = '/dealer'
+    weight = 4
+[[main]]
+    identifier = 'gallery'
+    name = 'gallery 相册'
+    url = '/gallery'
+    pageRef = '/gallery'
+    weight = 5
+[[main]]
+    identifier = 'video'
+    name = 'video 视频'
+    url = 'video'
+    pageRef = '/video' 
+    weight = 6
+[[main]]
+    identifier = 'contact-us'
+    name = 'contact us 联系我们'
+    video = '/contact-us'
+    pageRef = '/contact-us'
+    weight = 7
+
