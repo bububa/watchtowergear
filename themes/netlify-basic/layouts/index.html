@@ -1,56 +1,65 @@
 {{ define "main" }}
-<img
-  src="https://static.wixstatic.com/media/ee5ae4_e9fe9ab7a34542e4bc6be850bc703d50~mv2_d_5760_3384_s_4_2.jpg/v1/fill/w_2560,h_874,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/ee5ae4_e9fe9ab7a34542e4bc6be850bc703d50~mv2_d_5760_3384_s_4_2.jpg"></img>
-<div class="flex flex-wrap">
-  <img src="/images/homepage/gallary/01.webp" class="w-1/5 object-cover"></img>
-  <img src="/images/homepage/gallary/02.webp" class="w-1/5"></img>
-  <img src="/images/homepage/gallary/03.webp" class="w-1/5"></img>
-  <video poster="/images/homepage/gallary/04.webp" class="w-2/5 object-cover" autoplay muted>
-    <source src="/images/homepage/gallary/04.mp4" type="video/mp4">
-    </source>
-  </video>
-  <img src="/images/homepage/gallary/05.webp" class="w-4/12 object-cover"></img>
-  <img src="/images/homepage/gallary/x.webp" class="w-4/12 object-cover"></img>
-  <img src="/images/homepage/gallary/06.webp" class="w-4/12 object-cover"></img>
-  <img src="/images/homepage/gallary/07.webp" class="w-1/5"></img>
-  <img src="/images/homepage/gallary/08.webp" class="w-1/5"></img>
-  <img src="/images/homepage/gallary/09.webp" class="w-1/5"></img>
-  <img src="/images/homepage/gallary/10.webp" class="w-1/5"></img>
-  <img src="/images/homepage/gallary/11.webp" class="w-1/5"></img>
+{{ $home := .Site.GetPage "/home" }}
+<div x-data="{}" x-init="$nextTick(() => {
+      let ul = $refs.gallery;
+      ul.insertAdjacentHTML('afterend', ul.outerHTML);
+      ul.nextSibling.setAttribute('aria-hidden', 'true');
+  })"
+  class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+  <div class="w-full inline-flex flex-nowrap">
+    <ul x-ref="gallery" class="flex items-center justify-center md:justify-start animate-infinite-scroll">
+      <li>
+        <div class="grid grid-rows-3 grid-flow-col gap-4">
+          {{- range $home.Resources.ByType "image" }}
+          <img src="{{ .RelPermalink }}" alt="{{ .Name }}" class="object-fill w-auto h-40 max-w-none" />
+          {{- end }}
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
-<div class="my-4">
-  <h2 class="text-2xl text-center text-bold py-6">Product Category 产品类别</h2>
-  <div class="flex flex-wrap flex-shrink justify-center align-start">
-    <div class="mx-4">
+<div
+  class="my-16 probe prose-gray prose-img:rounded-lg prose-img:shadow-4xl prose-headings:font-semibold prose-headings:text-center prose-headings:leading-10 pros-h3:leading-6 prose-h3:capitalize prose-h3:font-medium prose-p:text-sm prose-p:mt-1 prose-p:text-gray-500 dark:prose-p:text-gray-400 prose-p:font-light prose-p:text-justify dark:prose-invert">
+  <h2>Products 产品类别</h2>
+  <div class="grid md:grid-cols-4 max-w-screen-md mx-auto gap-10 mt-8 px-5">
+    <div class="flex gap-4 items-center flex-col">
       <img
-        src="https://static.wixstatic.com/media/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg/v1/fill/w_226,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg"></img>
-      <div class="relative opacity-70 left-0 right-0 text-center bg-white -top-12 mx-4 p-6">
-        <div class="mb-4">Guitar</div>
-        <div>吉他</div>
+        src="https://static.wixstatic.com/media/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg/v1/fill/w_226,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg"
+        class="shadow-amber-400/50"></img>
+      <div>
+        <h3>guitar 吉他</h3>
+        <p>You don't need to be an expert to use our plugin. Our expressive API is
+          readable and well documented.</p>
       </div>
     </div>
-    <div class="mx-4">
+    <div class="flex gap-4 items-center flex-col ">
       <img
-        src="https://static.wixstatic.com/media/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg/v1/fill/w_226,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg"></img>
-      <div class="relative opacity-70 left-0 right-0 text-center bg-white -top-12 mx-4 p-6">
-        <div class="mb-4">Guitar</div>
-        <div>吉他</div>
+        src="https://static.wixstatic.com/media/ee5ae4_1fb951e2a1e34e2c8fa4ae18e423a442~mv2_d_1692_1365_s_2.jpg/v1/fill/w_227,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_1fb951e2a1e34e2c8fa4ae18e423a442~mv2_d_1692_1365_s_2.jpg"
+        class="shadow-red-600/50"></img>
+      <div>
+        <h3>pedals 效果器</h3>
+        <p> You don't need to be an expert to use our plugin. Our expressive API is
+          readable and well documented.</p>
       </div>
     </div>
-    <div class="mx-4">
+    <div class="flex gap-4 items-center flex-col ">
       <img
-        src="https://static.wixstatic.com/media/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg/v1/fill/w_226,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg"></img>
-      <div class="relative opacity-70 left-0 right-0 text-center bg-white -top-12 mx-4 p-6">
-        <div class="mb-4">Guitar</div>
-        <div>吉他</div>
+        src="https://static.wixstatic.com/media/ee5ae4_de13bc97f07f47b8b58caf7d81dc86bb~mv2.jpg/v1/fill/w_229,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_de13bc97f07f47b8b58caf7d81dc86bb~mv2.jpg"
+        class="shadow-yellow-600/50"></img>
+      <div>
+        <h3>cable 线材</h3>
+        <p> You don't need to be an expert to use our plugin. Our expressive API is
+          readable and well documented.</p>
       </div>
     </div>
-    <div class="mx-4">
+    <div class="flex gap-4 items-center flex-col">
       <img
-        src="https://static.wixstatic.com/media/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg/v1/fill/w_226,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg"></img>
-      <div class="relative opacity-70 left-0 right-0 text-center bg-white -top-12 mx-4 p-6">
-        <div class="mb-4">Guitar</div>
-        <div>吉他</div>
+        src="https://static.wixstatic.com/media/ee5ae4_b46cd7371b90468dbe427704d3ae1182~mv2_d_1765_2312_s_2.jpg/v1/fill/w_226,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_b46cd7371b90468dbe427704d3ae1182~mv2_d_1765_2312_s_2.jpg"
+        class="shadow-zinc-500/50"></img>
+      <div>
+        <h3>accessory 配件</h3>
+        <p> You don't need to be an expert to use our plugin. Our expressive API is
+          readable and well documented.</p>
       </div>
     </div>
   </div>

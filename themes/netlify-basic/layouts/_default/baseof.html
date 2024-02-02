@@ -2,10 +2,15 @@
 <html>
 {{- partial "head.html" . -}}
 
-<body class="w-full">
+<body class="w-full bg-white dark:bg-slate-800 text-slate-900 dark:text-white">
   {{- partial "menu.html" . -}}
-  {{- block "main" . }}{{- end }}
+  <main>
+    {{- block "main" . }}{{- end }}
+  </main>
   {{- partial "footer.html" -}}
 </body>
+{{- range .Site.Params.customJS }}
+<script src="{{ . | relURL }}" type="text/javascript"></script>
+{{- end }}
 
 </html>
