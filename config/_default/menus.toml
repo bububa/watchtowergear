@@ -18,7 +18,7 @@
     weight = 3
 [[main]]
     identifier = 'dealer'
-    name = 'dealer 经销商'
+    name = 'dealer 合作伙伴'
     url = '/dealer'
     pageRef = '/dealer'
     weight = 4
