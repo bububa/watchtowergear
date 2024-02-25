@@ -17,19 +17,27 @@
     {{- end}}
   </nav>
 </div>
-<nav x-data="{open:false}" class="fixed z-10 md:hidden top-0 left-0">
-  <a x-on:click="open = ! open" class="rounded-md shadow-md m-4 mb-0 inline-block backdrop-blur-lg bg-white/30">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-      x-show="!open" class="w-8 h-8">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-    </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-      x-show="open" class="w-8 h-8">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-    </svg>
-  </a>
+<nav x-data="{open:false}" class="sticky z-10 md:hidden top-0 left-0 right-0">
+  <div
+    class="relative flex flex-nowrap justify-between backdrop-blur-lg shadow-md bg-white/30 text-slate-600 dark:text-slate-300">
+    <div>
+      <a x-on:click="open = ! open" class="rounded-md m-4 mb-0 inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          x-show="!open" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          x-show="open" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </a>
+    </div>
+    <div class="p-4">
+      <img src="/images/logo.png" class="h-8 invert opacity-90" />
+    </div>
+  </div>
   <div x-show="open"
-    class="relative top-0 left-2 shadow-md backdrop-blur-lg bg-white/30 text-slate-600 dark:text-slate-300 font-light text-sm rounded">
+    class="absolute top-20 left-2 shadow-md backdrop-blur-lg bg-white/30 text-slate-600 dark:text-slate-300 font-light text-sm rounded">
     {{- range site.Menus.main }}
     {{- if eq .Identifier "home" }}
     {{- $textTransform = "uppercase" }}

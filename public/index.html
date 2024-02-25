@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html><head>
+	<meta name="generator" content="Hugo 0.123.3"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  </link>
+  
+  
+  <title>Watch Tower Gear</title>
+</head>
+<body class="w-full bg-white dark:bg-slate-800 text-slate-900 dark:text-white">
+<div class="z-10 hidden md:flex sticky left-0 right-0 top-0 py-8 justify-center flex-row flex-shrink mx-auto">
+  <div id="siri-container" class="absolute top-0 left-0 right-0 h-36"></div>
+  <nav
+    class="w-auto rounded shadow-md text-sm backdrop-blur-lg bg-white/30 text-slate-600 dark:text-slate-300 font-light">
+    <a href="/"
+      class="p-4 inline-block pointer-events-auto uppercase bg-black text-white font-medium">
+      home 首页
+    </a>
+    <a href="/about-us/"
+      class="p-4 inline-block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      about us 简介
+    </a>
+    <a href="/brand/"
+      class="p-4 inline-block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      brand 品牌
+    </a>
+    <a href="/dealer"
+      class="p-4 inline-block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      dealer 经销商
+    </a>
+    <a href="/gallery"
+      class="p-4 inline-block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      gallery 相册
+    </a>
+    <a href="video"
+      class="p-4 inline-block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      video 视频
+    </a>
+    <a href=""
+      class="p-4 inline-block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      contact us 联系我们
+    </a>
+  </nav>
+</div>
+<nav x-data="{open:false}" class="sticky z-10 md:hidden top-0 left-0 right-0">
+  <div
+    class="relative flex flex-nowrap justify-between backdrop-blur-lg shadow-md bg-white/30 text-slate-600 dark:text-slate-300">
+    <div>
+      <a x-on:click="open = ! open" class="rounded-md m-4 mb-0 inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          x-show="!open" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          x-show="open" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </a>
+    </div>
+    <div class="p-4">
+      <img src="/images/logo.png" class="h-8 invert opacity-90" />
+    </div>
+  </div>
+  <div x-show="open"
+    class="absolute top-20 left-2 shadow-md backdrop-blur-lg bg-white/30 text-slate-600 dark:text-slate-300 font-light text-sm rounded">
+    <a href="/"
+      class="p-4 block pointer-events-auto uppercase bg-black text-white font-medium">
+      home 首页
+    </a>
+    <a href="/about-us/"
+      class="p-4 block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      about us 简介
+    </a>
+    <a href="/brand/"
+      class="p-4 block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      brand 品牌
+    </a>
+    <a href="/dealer"
+      class="p-4 block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      dealer 经销商
+    </a>
+    <a href="/gallery"
+      class="p-4 block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      gallery 相册
+    </a>
+    <a href="video"
+      class="p-4 block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      video 视频
+    </a>
+    <a href=""
+      class="p-4 block pointer-events-auto capitalize hover:font-medium hover:drop-shadow-2xl hover:text-slate-900 dark:hover:text-white">
+      contact us 联系我们
+    </a>
+  </div>
+</nav>
+<main>
+
+<div x-data="{}" x-init="$nextTick(() => {
+      let ul = $refs.gallery;
+      ul.insertAdjacentHTML('afterend', ul.outerHTML);
+      ul.nextSibling.setAttribute('aria-hidden', 'true');
+  })"
+  class="w-full relative overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+  <div class="w-full inline-flex flex-nowrap">
+    <ul x-ref="gallery" class="flex items-center justify-center md:justify-start animate-infinite-scroll px-2">
+      <li>
+        <div class="grid grid-rows-3 grid-flow-col gap-4">
+          <img src="/home/box%20of%20rock.jpg" alt="box-of-rock.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/collings%20guitar%203.jpg" alt="collings-guitar-3.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/collings%20guitar%205.jpg" alt="collings-guitar-5.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/collings%20guitar.jpg" alt="collings-guitar.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/collings%20guitar4.jpg" alt="collings-guitar4.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/cream%20T%20Pickup.jpg" alt="cream-t-pickup.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/diezel%20amp-copy.jpg" alt="diezel-amp-copy.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/diezel%20amp.jpg" alt="diezel-amp.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/forest.jpg" alt="forest.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/fryete.jpg" alt="fryete.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/highwood%20saddles.jpg" alt="highwood-saddles.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/magnatone%20amp.jpg" alt="magnatone-amp.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/magnatone%20amp_copy.jpg" alt="magnatone-amp_copy.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/maybach%20guitar.jpg" alt="maybach-guitar.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/maybach%20guitar_copy.jpg" alt="maybach-guitar_copy.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/milkman%20amp.jpg" alt="milkman-amp.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/morgan%20amp.jpg" alt="morgan-amp.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/paoletti%20guitar%202.jpg" alt="paoletti-guitar-2.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/paoletti%20guitar.jpg" alt="paoletti-guitar.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/providence%20cable.jpg" alt="providence-cable.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/ravenstone.jpg" alt="ravenstone.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/santa%20cruz%20guitar%202.jpg" alt="santa-cruz-guitar-2.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/santa%20cruz%20guitar%203.jpg" alt="santa-cruz-guitar-3.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/santa%20cruz%20guitar4.jpg" alt="santa-cruz-guitar4.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/santa%20string.jpg" alt="santa-string.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/santa%20string_copy.jpg" alt="santa-string_copy.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/sib.jpg" alt="sib.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/silencer.jpg" alt="silencer.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/soldano%20amp.jpg" alt="soldano-amp.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/sound%20city%20amp%202.jpg" alt="sound-city-amp-2.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/sound%20city%20amp.jpg" alt="sound-city-amp.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/super%20hard%20on.jpg" alt="super-hard-on.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/waterloo%20guitar%202.jpg" alt="waterloo-guitar-2.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/waterloo%20guitar.jpg" alt="waterloo-guitar.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/weber%20speaker.jpg" alt="weber-speaker.jpg" class="object-fill w-auto h-40 max-w-none" />
+          <img src="/home/winter.jpg" alt="winter.jpg" class="object-fill w-auto h-40 max-w-none" />
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="absolute flex top-0 bottom-0 left-0 right-0 bg-slate-500/[0.5] p-10">
+    <img src="/images/logo.png" class="mx-auto object-contain aspect-auto opacity-95 backdrop-shadow-2xl" />
+  </div>
+</div>
+<div
+  class="my-16 probe prose-gray prose-img:rounded-lg prose-img:shadow-4xl prose-headings:font-semibold prose-headings:text-center prose-headings:leading-10 pros-h3:leading-6 prose-h3:capitalize prose-h3:font-medium prose-p:text-sm prose-p:mt-1 prose-p:text-gray-500 dark:prose-p:text-gray-400 prose-p:font-light prose-p:text-justify dark:prose-invert">
+  <h2>Products 产品类别</h2>
+  <div class="grid md:grid-cols-4 max-w-screen-md mx-auto gap-10 mt-8 px-5">
+    <div class="flex gap-4 items-center flex-col">
+      <img
+        src="https://static.wixstatic.com/media/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg/v1/fill/w_226,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_62d02d4fd4b948af9b410fe626a8bf4c~mv2.jpg"
+        class="shadow-amber-400/50"></img>
+      <div>
+        <h3>guitar 吉他</h3>
+        <p>You don't need to be an expert to use our plugin. Our expressive API is
+          readable and well documented.</p>
+      </div>
+    </div>
+    <div class="flex gap-4 items-center flex-col ">
+      <img
+        src="https://static.wixstatic.com/media/ee5ae4_1fb951e2a1e34e2c8fa4ae18e423a442~mv2_d_1692_1365_s_2.jpg/v1/fill/w_227,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_1fb951e2a1e34e2c8fa4ae18e423a442~mv2_d_1692_1365_s_2.jpg"
+        class="shadow-red-600/50"></img>
+      <div>
+        <h3>pedals 效果器</h3>
+        <p> You don't need to be an expert to use our plugin. Our expressive API is
+          readable and well documented.</p>
+      </div>
+    </div>
+    <div class="flex gap-4 items-center flex-col ">
+      <img
+        src="https://static.wixstatic.com/media/ee5ae4_de13bc97f07f47b8b58caf7d81dc86bb~mv2.jpg/v1/fill/w_229,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_de13bc97f07f47b8b58caf7d81dc86bb~mv2.jpg"
+        class="shadow-yellow-600/50"></img>
+      <div>
+        <h3>cable 线材</h3>
+        <p> You don't need to be an expert to use our plugin. Our expressive API is
+          readable and well documented.</p>
+      </div>
+    </div>
+    <div class="flex gap-4 items-center flex-col">
+      <img
+        src="https://static.wixstatic.com/media/ee5ae4_b46cd7371b90468dbe427704d3ae1182~mv2_d_1765_2312_s_2.jpg/v1/fill/w_226,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee5ae4_b46cd7371b90468dbe427704d3ae1182~mv2_d_1765_2312_s_2.jpg"
+        class="shadow-zinc-500/50"></img>
+      <div>
+        <h3>accessory 配件</h3>
+        <p> You don't need to be an expert to use our plugin. Our expressive API is
+          readable and well documented.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main><div
+  class="border-t border-dashed border-slate-200 dark:border-slate-600 mt-36 p-4 text-center font-light text-sm text-slate-500 dark:text-slate-400">
+  Copyright © 2022 by FICCY International Ltd. All Rights Reserved
+</div>
+</body>
+<script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+</html>
