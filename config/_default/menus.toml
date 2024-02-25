@@ -17,10 +17,10 @@
     pageRef = '/brand'
     weight = 3
 [[main]]
-    identifier = 'dealer'
-    name = 'dealer 合作伙伴'
-    url = '/dealer'
-    pageRef = '/dealer'
+    identifier = 'partner'
+    name = 'partner 合作伙伴'
+    url = '/partner'
+    pageRef = '/partner'
     weight = 4
 [[main]]
     identifier = 'gallery'
