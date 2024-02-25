@@ -1,8 +1,13 @@
 {{ define "main" }}
+{{ $brand := .Site.GetPage "/brand" }}
 <div
   class="container mx-auto max-w-screen-md my-4 px-4 md:px-0 probe prose-gray prose-img:mx-auto prose-headings:font-bold prose-headings:text-center prose-headings:text-xl prose-headings:capitalize prose-headings:leading-10 prose-h2:font-semibold prose-h2:text-base prose-img:my-4 prose-p:text-sm prose-p:mt-1 prose-p:text-gray-500 dark:prose-p:text-gray-400 prose-p:font-light prose-p:text-justify prose-p:leading-loose dark:prose-invert">
   <h1>{{ .Title }}</h1>
-  <img src="/images/logos.webp"></img>
+  <div class="w-full flex flex-wrap my-4">
+    {{- range $brand.Resources.ByType "image" }}
+    <img src="{{ .RelPermalink }}" alt="{{ .Name }}" class="h-20 p-2" />
+    {{- end }}
+  </div>
   <h2>Introduction 简介</h2>
   <img
     src="https://static.wixstatic.com/media/ee5ae4_b62cd4d900f3457e803cbe5ed158dfd2~mv2.jpg/v1/fill/w_725,h_275,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/FgN%20Banner.jpg"></img>
