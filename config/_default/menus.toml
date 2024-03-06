@@ -23,18 +23,6 @@
     pageRef = '/partner'
     weight = 4
 [[main]]
-    identifier = 'gallery'
-    name = 'gallery 相册'
-    url = '/gallery'
-    pageRef = '/gallery'
-    weight = 5
-[[main]]
-    identifier = 'video'
-    name = 'video 视频'
-    url = 'video'
-    pageRef = '/video' 
-    weight = 6
-[[main]]
     identifier = 'contact-us'
     name = 'contact us 联系我们'
     video = '/contact-us'
