@@ -14,5 +14,19 @@
       <guid>http://localhost:1313/about-us/</guid>
       <description></description>
     </item>
+    <item>
+      <title>contact us 联系我们</title>
+      <link>http://localhost:1313/contact-us/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact-us/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>partner 合作伙伴</title>
+      <link>http://localhost:1313/partner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/partner/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
