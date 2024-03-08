@@ -17,12 +17,6 @@
     pageRef = '/brand'
     weight = 3
 [[main]]
-    identifier = 'partner'
-    name = 'partner 合作伙伴'
-    url = '/partner'
-    pageRef = '/partner'
-    weight = 4
-[[main]]
     identifier = 'contact-us'
     name = 'contact us 联系我们'
     video = '/contact-us'
